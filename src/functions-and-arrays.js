@@ -149,7 +149,26 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(array, controlWord) {
+
+  if(array.length === 0){
+    return 0;
+  }
+  // let count = 0;
+  // for(let i=0; i>array.length; i++){
+  //   if(array[i] === controlWord){
+  //     count++;
+      
+  //   }
+  // }
+  // return count;
+  let count = 0;
+  for(let word of array){
+    if(word === controlWord){
+      count++ 
+    }
+  }return count;
+}
 
 
 
