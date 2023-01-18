@@ -1,21 +1,57 @@
 console.log("hello world");
 
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a, b) {
+  if (a>b){
+    return a;
+  } else if(b>a){
+    return b;
+  }else return a;
+}
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(wordArray) {
+  if (wordArray.length === 0){
+    return null;
+  }
+
+  let longestWord = "";
+
+  for(let character of wordArray){
+    if(character.length > longestWord.length){
+      longestWord = character
+      
+    }
+    
+  }
+  return longestWord;
+  
+  
+}
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numArray) {
+
+  if(numArray.length === 0){
+    return 0;
+  }
+
+  let numbers = 0;
+  for(let number of numArray){
+    numbers= number + numbers;
+  }
+
+  return numbers;
+
+}
 
 
 
@@ -28,7 +64,19 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(averageNum) {
+  if(averageNum.length === 0){
+    return null;
+  }
+
+  let numbers = 0;
+  for(let number of averageNum){
+    numbers= number + numbers;
+  }
+
+  return numbers / averageNum.length;
+
+}
 
 
 // Level 2: Array of strings
@@ -54,14 +102,35 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(uniArray) {
+  if(uniArray.length === 0){
+    return null;
+  }
+  let result = uniArray.filter((item,index)=>
+  {
+    return uniArray.indexOf(item) === index;
+  })
+  return result;
+}
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(arrayOfWords, searchWord) {
+  if(arrayOfWords.length === 0){
+    return null;
+  }
+
+  for(let word of arrayOfWords){
+    if (arrayOfWords.includes(searchWord)){
+      return true;
+    }else if(!arrayOfWords.includes(searchWord)){
+      return false;
+    }
+  }
+}
 
 
 
