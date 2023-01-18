@@ -1,3 +1,5 @@
+console.log("hello world");
+
 // Iteration #1: Find the maximum
 function maxOfTwoNumbers() {}
 
